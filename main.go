@@ -35,11 +35,11 @@ func MethodologyHandler(w http.ResponseWriter, r *http.Request){
 
 }
 
-func PosterHandler(w http.ResponseWriter, r *http.Request){
+//func PosterHandler(w http.ResponseWriter, r *http.Request){
 
-	generateHTML(w,nil,"index","poster")
+//	generateHTML(w,nil,"index","poster")
 
-}
+//}
 
 func main() {
 	http.HandleFunc("/", IntroductionHandler)
@@ -48,10 +48,8 @@ func main() {
 
 
 	fs := http.FileServer(http.Dir(templatesdirectoryPath))
-	http.Handle(cssPath, fs)
 	http.Handle(imagesPath, fs)
-	http.Handle(jsPath, fs)
 
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe("dfswebapp.herokuapp.com:8080", nil)
 }
 
