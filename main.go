@@ -31,7 +31,7 @@ func IntroductionHandler(w http.ResponseWriter, r *http.Request) {
 
 func MethodologyHandler(w http.ResponseWriter, r *http.Request){
 
-	generateHTML(w,"","index","methodology")
+	generateHTML(w,nil,"index","methodology")
 
 }
 
@@ -50,6 +50,6 @@ func main() {
 	fs := http.FileServer(http.Dir(templatesdirectoryPath))
 	http.Handle(imagesPath, fs)
 
-	http.ListenAndServe("dfswebapp.herokuapp.com:8080", nil)
+	http.ListenAndServe(":8080", nil)
 }
 
