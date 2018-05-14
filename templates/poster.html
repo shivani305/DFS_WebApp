@@ -1,0 +1,14 @@
+{{define "content"}}
+
+<h3>Introduction</h3>
+<div class="info">
+
+    <p>We have traditional Interior Gateway routing protocols that route the traffic in the shortest path considering static metrics. However, over the time, the shortest path chosen might get congested due to having all the traffic routed in that path. It causes delay. Also, other routes to the destination are underutilized. This may not be suitable for delay-sensitive applications. So, an intelligent flow configuration module which reacts dynamically to changes in the network is needed to address delay-sensitive applications.
+    </p>
+    <p>Software Defined Networking (SDN) introduces the concept of centralized controller. It has a centralized view of the network topology. It has capability to manage and control the routers and switches in the Data Layer.
+    </p>
+    <p>Since controller has a centralized view and has all network related information, an application can be built on top of controller which reacts dynamically to the changes in the traffic or network and updates the flow tables. This reduces delays. Dynamic Flow Steering application makes use of SDN controller, northbound and southbound APIs to control the routers/switches so that they make intelligent routing/forwarding decisions in real time according to the dynamic metric.
+    </p>
+</div>
+
+{{end}}

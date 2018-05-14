@@ -1,0 +1,16 @@
+{{define "content"}}
+
+<h3>Methodology</h3>
+<div class="info">
+
+    <p><strong>Step 1:</strong> Download Mininet VM. Install it in a virtualization software like VMware Worksstation, VMware Fusion, Oracle Virtualbox.</p>
+<p><strong>Step2:</strong> Download/clone the ryu-controller and application files from the Github repository onto mininet VM. Install the dependencies if required using 'sudo apt-get install <i>package_name</i>' or 'sudo pip install <i>package_name</i>'. Go to /ryu folder using 'cd ryu'. Install the controller using the following command: </p>
+<p>  <em> $sudo python setup.py install </em></p>
+<p>From the current ryu folder, to run the graphical user interface (that shows the topology) and the DFS application, run the following command:</p>
+<p>  <em> $sudo ryu-manager ryu/app/gui_topology/gui-topology.py ryu/app/DFS/DFS.Py --observe-links --k-paths=1 --weight=delay </em></p>
+
+    <p> <strong> Step3: </strong>>Write a script in python for customised topology. The ip address of the remote controller (that it must connect to) is mininet VM's ip. Emulate the network in a separate terminal in mininet using the following command:</p>
+    <p><em>$sudo python 'customtopology_filename.py'</em> </p>
+    <p> The results can be viewed in project poster</p>
+</div>
+{{end}}
