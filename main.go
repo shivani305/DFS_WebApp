@@ -50,6 +50,6 @@ func main() {
 	fs := http.FileServer(http.Dir(templatesdirectoryPath))
 	http.Handle(imagesPath, fs)
 
-	http.ListenAndServe(":8080", nil)
+	log.Fatal(http.ListenAndServeTLS(":8080", nil, nil, nil))
 }
 
