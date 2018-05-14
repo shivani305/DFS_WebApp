@@ -1,6 +1,6 @@
 { 
     "ImportPath": "github.com/shivani/DFS_WebApp",
-    "GoVersion": "go1.94",
+    "GoVersion": "go1.9",
     "Packages": [
         "./..."
         ]
