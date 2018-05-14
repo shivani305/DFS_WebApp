@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 	"html/template"
+	"log"
 )
 const (
 	templatesdirectoryPath="templates"
@@ -50,6 +51,6 @@ func main() {
 	fs := http.FileServer(http.Dir(templatesdirectoryPath))
 	http.Handle(imagesPath, fs)
 
-	log.Fatal(http.ListenAndServeTLS(":8080", nil, nil, nil))
+	log.Fatal(http.ListenAndServeTLS(":8080", "", "", nil))
 }
 
