@@ -3,5 +3,5 @@
     "GoVersion": "go1.94",
     "Packages": [
         "./..."
-        ];
+        ]
 }
