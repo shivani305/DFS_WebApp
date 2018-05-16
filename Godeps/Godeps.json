@@ -1,4 +1,6 @@
 { 
+    "website": "http://github.com/shivani/DFS_WebApp",
+  "repository": "http://github.com/shivani/DFS_WebApp",
     "ImportPath": "github.com/shivani/DFS_WebApp",
     "GoVersion": "go1.9",
     "Packages": [
