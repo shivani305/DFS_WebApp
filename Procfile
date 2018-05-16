@@ -1,1 +1,1 @@
-web: appswebcommand
+web: DFS_WebApp
