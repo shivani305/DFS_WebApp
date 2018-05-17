@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"html/template"
 	"log"
+	"os"
 )
 const (
 	templatesdirectoryPath="templates"
@@ -41,6 +42,12 @@ func MethodologyHandler(w http.ResponseWriter, r *http.Request){
 //	generateHTML(w,nil,"index","poster")
 
 //}
+func Getport() string {
+	port:=os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	return ":" + port
 
 func main() {
 	http.HandleFunc("/", IntroductionHandler)
@@ -51,6 +58,6 @@ func main() {
 	fs := http.FileServer(http.Dir(templatesdirectoryPath))
 	http.Handle(imagesPath, fs)
 
-	log.Fatal(http.ListenAndServeTLS(":8080", "", "", nil))
+	log.Fatal(http.ListenAndServe(Getport(),nil))
 }
 
