@@ -48,6 +48,7 @@ func Getport() string {
 		port = "8080"
 	}
 	return ":" + port
+}
 
 func main() {
 	http.HandleFunc("/", IntroductionHandler)
